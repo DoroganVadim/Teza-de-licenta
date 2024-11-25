@@ -1,0 +1,349 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DoctorApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DoctorApplication.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\DoctorApplicationConfirmation.css",
+      "PackagePath": "staticwebassets\\css\\DoctorApplicationConfirmation.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\FromTemplate\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\FromTemplate\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\FromTemplate\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\FromTemplate\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\FromTemplate\\style.css",
+      "PackagePath": "staticwebassets\\css\\FromTemplate\\style.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\ProfileCheck.css",
+      "PackagePath": "staticwebassets\\css\\ProfileCheck.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\Tab.css",
+      "PackagePath": "staticwebassets\\css\\Tab.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\doctorPorfile.css",
+      "PackagePath": "staticwebassets\\css\\doctorPorfile.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\css\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\jquery.timepicker.css",
+      "PackagePath": "staticwebassets\\css\\jquery.timepicker.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\jquery.timepicker.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.timepicker.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\loginForm.css",
+      "PackagePath": "staticwebassets\\css\\loginForm.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\loginForm\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\loginForm\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\loginForm\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\loginForm\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\pagination.css",
+      "PackagePath": "staticwebassets\\css\\pagination.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\FromTemplate\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\FromTemplate\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\FromTemplate\\contactform.js",
+      "PackagePath": "staticwebassets\\js\\FromTemplate\\contactform.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\FromTemplate\\custom.js",
+      "PackagePath": "staticwebassets\\js\\FromTemplate\\custom.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\FromTemplate\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\js\\FromTemplate\\jquery.easing.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\FromTemplate\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\FromTemplate\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\getDate.js",
+      "PackagePath": "staticwebassets\\js\\getDate.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\jquery.timepicker.js",
+      "PackagePath": "staticwebassets\\js\\jquery.timepicker.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\jquery.timepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.timepicker.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\loginForm.js",
+      "PackagePath": "staticwebassets\\js\\loginForm.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\loginForm\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\loginForm\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\loginForm\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\loginForm\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\NotFound.png",
+      "PackagePath": "staticwebassets\\res\\img\\NotFound.png"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\bg-banner.jpg",
+      "PackagePath": "staticwebassets\\res\\img\\bg-banner.jpg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\doctor1.jpg",
+      "PackagePath": "staticwebassets\\res\\img\\doctor1.jpg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\doctor2.jpg",
+      "PackagePath": "staticwebassets\\res\\img\\doctor2.jpg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\doctor3.jpg",
+      "PackagePath": "staticwebassets\\res\\img\\doctor3.jpg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\doctor4.jpg",
+      "PackagePath": "staticwebassets\\res\\img\\doctor4.jpg"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\logo.png",
+      "PackagePath": "staticwebassets\\res\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\wwwroot\\res\\img\\thumb.png",
+      "PackagePath": "staticwebassets\\res\\img\\thumb.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.DoctorApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.DoctorApplication.props",
+      "PackagePath": "build\\DoctorApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.DoctorApplication.props",
+      "PackagePath": "buildMultiTargeting\\DoctorApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.DoctorApplication.props",
+      "PackagePath": "buildTransitive\\DoctorApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

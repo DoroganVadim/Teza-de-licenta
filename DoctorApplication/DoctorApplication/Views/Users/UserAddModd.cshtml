@@ -1,0 +1,26 @@
+﻿@using DoctorApplication.Models.DbEntities
+@model Account
+@{
+    ViewData["Title"] = "Edit User";
+}
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="text-center">
+    <form method="post" asp-action="AddMod">
+        <input asp-for="id" hidden />
+        <div class="form-group">
+            <label>@Localizer["E-Mail"]</label>
+            <input type="text" class="form-control" asp-for="email">
+        </div>
+        <div class="form-group">
+            <label>@Localizer["Password"]</label>
+            <input type="password" value="@Model.password" class="form-control" asp-for="password">
+        </div>
+        <input type="submit" class="btn btn-primary" value="@Localizer["Submit"]">
+    </form>
+    <br>
+    <form method="post" asp-action="Back" asp-route-page="@TempData["pageUser"]">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>

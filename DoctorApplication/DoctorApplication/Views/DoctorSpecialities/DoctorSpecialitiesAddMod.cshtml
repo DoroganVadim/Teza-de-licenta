@@ -1,0 +1,23 @@
+﻿@using DoctorApplication.Models.DbEntities
+@model DoctorSpecialitie
+@{
+    ViewData["Title"] = "Edit Type";
+}
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="text-center" style="margin-top:10rem">
+    <form method="post" asp-action="AddMod" >
+        <input asp-for="id" hidden />
+        <div class="form-group">
+            <label>@Localizer["Naming"]</label>
+            <input type="text" class="form-control" asp-for="name">
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="@Localizer["Submit"]">
+    </form>
+    <br>
+    <form method="post" asp-action="Back" asp-route-page="@TempData["pageUser"]">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>

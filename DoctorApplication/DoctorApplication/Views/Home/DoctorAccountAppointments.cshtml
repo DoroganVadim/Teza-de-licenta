@@ -1,0 +1,168 @@
+﻿@using DoctorApplication.Models.Home
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model DoctorAccountProfileModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Profile";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/pagination.css" />
+<link rel="stylesheet" href="~/css/jquery.timepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="~/css/doctorProfile.css">
+<link rel="stylesheet" type="text/css" href="~/css/DoctorApplicationConfirmation.css">
+<link rel="stylesheet" type="text/css" href="~/css/Tab.css">
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/jquery-3.6.0.min.js" asp-append-version="true"></script>
+<script src="~/js/jquery.timepicker.min.js" asp-append-version="true"></script>
+<script src="~/js/getDate.js" asp-append-version="true"></script>
+
+<div class="container">
+    <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">@Localizer["Home"]</a></li>
+            <li class="breadcrumb-item"><a asp-action="DoctorAccountProfile" asp-controller="Home">@Localizer["DoctorProfile"]</a></li>
+            <li class="breadcrumb-item" aria-current="page">@Localizer["Appointments"]</li>
+        </ol>
+    </nav>
+    <div class="tabs">
+        <div class="tab">
+            @if (TempData["Tab"] != null && TempData["Tab"] is 1)
+            {
+                <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            }
+            @if (TempData["Tab"] != null && TempData["Tab"] is 2)
+            {
+                <input type="radio" name="css-tabs" id="tab-1" class="tab-switch">
+            }
+            <label for="tab-1" class="tab-label">@Localizer["Appointments"]</label>
+            <div class="tab-content">
+                <div class="wrapper" style="width:100%">
+                    <div class="container">
+                        @if (Model.appointments.Count() <= 0)
+                        {
+                            <h5>@Localizer["NoAppointments"]</h5>
+                        }
+                        <ul>
+                            @foreach (var appointment in Model.appointments)
+                            {
+                                <li class="item_wrap male online">
+                                    <div class="item">
+                                        <div class="item_left">
+                                            <div class="data">
+                                                <p class="name">@appointment.surrnamePacient @appointment.namePacient</p>
+                                                <p class="distance">
+                                                    @Localizer["Date"]: @appointment.appointmentDate.ToShortDateString() @Localizer["Time"]: @appointment.appointmentTime.ToString(@"hh\:mm")
+                                                    <br>@Localizer["PhoneNumber"]: @appointment.tel
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h6><a asp-action="DenyAppointment" asp-controller="Home" asp-route-id="@appointment.id" asp-route-tab="1" asp-route-page="@Model.page.pageNumber" asp-route-pageToBeAccepted="@Model.pageToBeAccepted.pageNumber"><span class="cross">x</span><span style="color:#000000">@Localizer["Deny"]</span></a></h6>
+                                    </div>
+                                    <br>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <center>
+                        @if (Model.page.HasPreviousPage)
+                        {
+                            <a asp-action="DoctorAccountAppointments"
+                               asp-route-page="@(Model.page.pageNumber-1)"
+                               asp-route-pageToBeAccepted="@(Model.pageToBeAccepted.pageNumber)"
+                               asp-route-tab="1"
+                               class="btn btn-outline-dark">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                @Localizer["Previous"]
+                            </a>
+                        }
+
+                        @if (Model.page.HasNextPage)
+                        {
+                            <a asp-action="DoctorAccountAppointments"
+                               asp-route-page="@(Model.page.pageNumber+1)"
+                               asp-route-pageToBeAccepted="@(Model.pageToBeAccepted.pageNumber)"
+                               asp-route-tab="1"
+                               class="btn btn-outline-dark">
+                                @Localizer["Next"]
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        }
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            @if (TempData["Tab"] != null && TempData["Tab"] is 1)
+            {
+                <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+            }
+            @if (TempData["Tab"] != null && TempData["Tab"] is 2)
+            {
+                <input type="radio" name="css-tabs" id="tab-2" checked class="tab-switch">
+            }
+
+            <label for="tab-2" class="tab-label">@Localizer["NonAcceptedAppointments"]</label>
+            <div class="tab-content">
+                <div class="wrapper" style="width:100%">
+                    <div class="container">
+                        @if (Model.appointmentsToBeAccepted.Count() <= 0)
+                        {
+                            <h5>@Localizer["NoAppointments"]</h5>
+                        }
+                        <ul>
+                            @foreach (var appointment in Model.appointmentsToBeAccepted)
+                            {
+                                <li class="item_wrap male online">
+                                    <div class="item">
+                                        <div class="item_left">
+                                            <div class="data">
+                                                <p class="name">@appointment.surrnamePacient @appointment.namePacient</p>
+                                                <p class="distance">
+                                                    @Localizer["Date"]: @appointment.appointmentDate.ToShortDateString() @Localizer["Time"]: @appointment.appointmentTime.ToString(@"hh\:mm")
+                                                    <br>@Localizer["PhoneNumber"]: @appointment.tel
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h6><a asp-action="AcceptAppointment" asp-controller="Home" asp-route-id="@appointment.id" asp-route-tab="2" asp-route-page="@Model.page.pageNumber" asp-route-pageToBeAccepted="@Model.pageToBeAccepted.pageNumber"><span class="check">&#10003</span><span style="color:#000000">@Localizer["Accept"]</span></a></h6>
+                                    </div>
+                                    <br>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <center>
+                        @if (Model.pageToBeAccepted.HasPreviousPage)
+                        {
+                            <a asp-action="DoctorAccountAppointments"
+                               asp-route-page="@(Model.page.pageNumber)"
+                               asp-route-pageToBeAccepted="@(Model.pageToBeAccepted.pageNumber-1)"
+                               asp-route-tab="2"
+                               class="btn btn-outline-dark">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                @Localizer["Previous"]
+                            </a>
+                        }
+
+                        @if (Model.pageToBeAccepted.HasNextPage)
+                        {
+                            <a asp-action="DoctorAccountAppointments"
+                               asp-route-page="@(Model.page.pageNumber)"
+                               asp-route-pageToBeAccepted="@(Model.pageToBeAccepted.pageNumber+1)"
+                               asp-route-tab="2"
+                               class="btn btn-outline-dark">
+                                @Localizer["Next"]
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        }
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

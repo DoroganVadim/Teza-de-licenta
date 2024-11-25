@@ -1,0 +1,64 @@
+﻿@using DoctorApplication.Models.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model LocalizationViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Localizer["Localization"]</h2>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">@Localizer["Num."]</th>
+                <th scope="col">@Localizer["Key"]</th>
+                <th scope="col">English</th>
+                <th scope="col">Română</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        @{
+            TempData["pageLoc"] = Convert.ToString(Model.pageViewModel.pageNumber);
+            int i = 1;
+            foreach (var lang in Model.langs)
+            {
+                <tr>
+                    <td>@(i + (Model.pageViewModel.pageNumber - 1) * Model.pageViewModel.pageSize)</td>
+                    <td>@lang.key</td>
+                    <td>@lang.langEn</td>
+                    <td>@lang.langRo</td>
+                    <td><a href="Localization/EditLocalization?Key=@lang.key&LangEn=@lang.langEn&LangRo=@lang.langRo">@Localizer["Edit"]</a></td>
+                </tr>
+                i++;
+            }
+        }
+        <tr>
+            <td><form method="post" asp-action="AddLocalization"><input type="submit" value="+" class="btn btn-outline-success" /></form></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</div>

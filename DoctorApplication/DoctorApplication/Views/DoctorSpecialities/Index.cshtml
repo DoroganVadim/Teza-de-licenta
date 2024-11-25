@@ -1,0 +1,74 @@
+﻿@using DoctorApplication.Models.DoctorSpecialities
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model DoctorSpecialitiesViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Localizer["DoctorTypes"]</h2>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th scope="col">@Localizer["Num."]</th>
+                <th scope="col">@Localizer["Id"]</th>
+                <th scope="col">@Localizer["Naming"]</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        @{
+            TempData["pageDoc"] = Convert.ToString(Model.pageViewModel.pageNumber);
+            int i = 1;
+            foreach (var type in Model.docSpecs)
+            {
+                <tr>
+                    <td>
+                        @if (type.enabled)
+                        {
+                            <form asp-action="Disable" asp-route-idType="@type.id" asp-route-page="@Model.pageViewModel.pageNumber"><input type="submit" value="@Localizer["Enabled"]" class="btn btn-primary"></form>
+                        }
+                        else
+                        {
+                            <form asp-action="Enable" asp-route-idType="@type.id" asp-route-page="@Model.pageViewModel.pageNumber"><input type="submit" value="@Localizer["Disabled"]" class="btn btn-secondary"></form>
+                        }
+
+                    </td>
+                    <td>@(i + (Model.pageViewModel.pageNumber - 1) * Model.pageViewModel.pageSize)</td>
+                    <td>@type.id</td>
+                    <td>@type.name</td>
+                    <td><a href="DoctorSpecialities/EditDoctorType?idDocType=@type.id">@Localizer["Edit"]</a></td>
+                </tr>
+                i++;
+            }
+        }
+        <tr>
+            <td><form method="post" asp-action="AddDoctorType"><input type="submit" value="+" class="btn btn-outline-success" /></form></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</div>

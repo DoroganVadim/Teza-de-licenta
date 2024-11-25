@@ -1,0 +1,103 @@
+﻿@using DoctorApplication.Models.Doctor
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model DoctorViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Localizer["Doctors"]</h2>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">@Localizer["Num."]</th>
+                <th scope="col">@Localizer["Id"]</th>
+                <th scope="col">@Localizer["Surname"]</th>
+                <th scope="col">@Localizer["Name"]</th>
+                <th scope="col">@Localizer["Speciality"]</th>
+                <th scope="col">@Localizer["E-Mail"]</th>
+                <th scope="col">@Localizer["PhoneNumber"]</th>
+                <th scope="col">@Localizer["Verified"]</th>
+                <th scope="col">@Localizer["Appointments"]</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        @{
+            TempData["pageDoc"] = Convert.ToString(Model.pageViewModel.pageNumber);
+            int i = 1;
+            foreach (var doc in Model.doctors)
+            {
+                <tr>
+                    <td>
+                        @if (doc.activityStatus)
+                        {
+                            <form asp-action="Disable" asp-route-idDoc="@doc.id" asp-route-page="@Model.pageViewModel.pageNumber"><input type="submit" value="@Localizer["Active"]" class="btn btn-primary"></form>
+                        }
+                        else
+                        {
+                            <form asp-action="Enable" asp-route-idDoc="@doc.id" asp-route-page="@Model.pageViewModel.pageNumber"><input type="submit" value="@Localizer["Inactive"]" class="btn btn-secondary"></form>
+                        }
+
+                    </td>
+                    <td>@(i + (Model.pageViewModel.pageNumber - 1) * Model.pageViewModel.pageSize)</td>
+                    <td>@doc.id</td>
+                    <td>@doc.surrname</td>
+                    <td>@doc.name</td>
+                    <td>
+                        <button type="button" class="collapsible">...</button>
+                        <div class="content" style="padding-top:0.4rem">
+                            @foreach (var type in doc.specialities)
+                            {
+                                @type.name
+                                ;
+                                <br>
+                            }
+                        </div>
+                    </td>
+                    <td>@doc.account.email</td>
+                    <td>@doc.tel</td>
+                    <td><a href="Doctor/ChangeVerifiedStatus?idDoc=@doc.id&page=@Model.pageViewModel.pageNumber">@doc.verified</a></td>
+                    <td><form method="post" asp-action="Appointments" asp-route-idDoc="@doc.id" asp-route-page="1"><input type="submit" value="..." class="btn btn-outline-info" /></form></td>
+                    <td><a href="Doctor/EditDoctor?idDoc=@doc.id">@Localizer["Edit"]</a></td>
+                </tr>
+                i++;
+            }
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</div>
+

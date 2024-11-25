@@ -1,0 +1,146 @@
+﻿@using DoctorApplication.Models.Account
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model AccountViewModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/loginForm.css">
+<link rel="stylesheet" type="text/css" href="~/css/loginForm/bootstrap.min.css">
+<body style="background-color: #004D4D;">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="height:7%">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">DoctorApp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1" style="margin-top:25px;">
+                    <li>
+                        <div class="input-group mb-3">
+                            <form asp-controller="Account" asp-action="SetLanguage"
+                                  asp-route-returnUrl="@Context.Request.Path"
+                                  method="post" class="form-horizontal">
+                                <select class="custom-select" name="culture" onchange="this.form.submit();">
+                                    <option selected value="">@Localizer["Language"]</option>
+                                    <option value="ro">Română</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+                <div class="login-box">
+                    <div class="login-snip">
+                        @if (string.IsNullOrEmpty(TempData["RegisterMessage"]?.ToString()))
+                        {
+                            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+
+                            <label for="tab-1" class="tab">@Localizer["Log In"]</label>
+                            <input id="tab-2" type="radio" name="tab" class="sign-up">
+
+                            <label for="tab-2" class="tab">@Localizer["Sign Up"]</label>
+                        }
+                        else
+                        {
+                            <input id="tab-1" type="radio" name="tab" class="sign-in">
+
+                            <label for="tab-1" class="tab">@Localizer["Log In"]</label>
+                            <input id="tab-2" type="radio" name="tab" class="sign-up" checked>
+
+                            <label for="tab-2" class="tab">@Localizer["Sign Up"]</label>
+                        }
+                        <div class="login-space">
+                            <form asp-action="Login" asp-controller="Account">
+                                <div class="login">
+                                    <div class="group">
+                                        <label class="label">@Localizer["E-Mail"]</label>
+                                        <input type="text" class="input" placeholder="@Localizer["Enter"] @Localizer["E-Mail"]" asp-for="loginModel.email" />
+                                        @if (!string.IsNullOrEmpty(TempData["LogInMessage"]?.ToString()))
+                                        {
+                                            <div style="color:#ff6060">
+                                                @Localizer[@TempData["LogInMessage"].ToString()]
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="group">
+                                        <label class="label">@Localizer["Password"]</label>
+                                        <input type="password" class="input" data-type="password" placeholder="@Localizer["Enter"] @Localizer["Password"]" asp-for="loginModel.password">
+                                    </div>
+                                    <div class="group">
+                                        <input type="submit" class="button" value="@Localizer["Log In"]">
+                                    </div>
+                                    <div class="hr"></div>
+                                    <div class="foot">
+                                        <a asp-action="ResetPassword" asp-controller="Account">@Localizer["ForgotPassword"]?</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="sign-up-form">
+                                <form asp-action="Register" asp-controller="Account">
+                                    <div class="group">
+                                        <label class="label">@Localizer["UserType"]</label>
+                                        <select id="accTypeSelect" class="custome-select">
+                                            <option value="User">@Localizer["User"]</option>
+                                            <option value="Doctor">@Localizer["Doctor"]</option>
+                                        </select>
+                                    </div>
+                                    <div class="group" id="email">
+                                        <label class="label">@Localizer["E-Mail"]</label>
+                                        <input type="text" class="input" placeholder="@Localizer["Enter"] @Localizer["E-Mail"]" asp-for="registerModel.email" value="@TempData["RegisterEmail"]?.ToString()">
+                                        @if (!string.IsNullOrEmpty(TempData["RegisterEmailMessage"]?.ToString()))
+                                        {
+                                            <div style="color:#ff6060">
+                                                @Localizer[@TempData["RegisterEmailMessage"].ToString()]
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="group" id="password">
+                                        <label class="label">@Localizer["Password"]</label>
+                                        <input id="pass" type="password" class="input" data-type="password" placeholder="@Localizer["Enter"] @Localizer["Password"]" asp-for="registerModel.password" value="@TempData["RegisterPassword"]?.ToString()">
+                                        @if (!string.IsNullOrEmpty(TempData["RegisterPasswordMessage"]?.ToString()))
+                                        {
+                                            <div style="color:#ff6060">
+                                                @Localizer[@TempData["RegisterPasswordMessage"].ToString()]
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="group" id="repPassword">
+                                        <label class="label">@Localizer["Repeat"] @Localizer["Password"]</label>
+                                        <input id="pass" type="password" class="input" data-type="password" placeholder="@Localizer["Repeat"] @Localizer["Password"]" asp-for="registerModel.confirmPassword">
+                                        @if (!string.IsNullOrEmpty(TempData["RegisterRepeatPasswordMessage"]?.ToString()))
+                                        {
+                                            <div style="color:#ff6060">
+                                                @Localizer[@TempData["RegisterRepeatPasswordMessage"].ToString()]
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="group" id="submit">
+                                        <input type="submit" class="button" value="@Localizer["SignUp"]">
+                                    </div>
+                                </form>
+                                <div class="group" id="doctorAply" style="display:none">
+                                    <form asp-action="DoctorAccountApplication" asp-controller="Account"><input type="submit" class="button" value="@Localizer["ApplyForDoctorStatus"]"></form>
+                                </div>
+                                <div class="foot">
+                                    <label for="tab-1">@Localizer["Already Member"]?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/loginForm/jquery.min.js"></script>
+    <script src="~/js/loginForm.js"></script>
+</body>

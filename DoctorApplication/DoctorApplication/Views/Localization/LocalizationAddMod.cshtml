@@ -1,0 +1,33 @@
+﻿@using DoctorApplication.Models.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model LangClass
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @{
+        string oldKey = Model.key;
+    }
+    <form method="post" asp-action="AddMod" asp-route-oldKey="@oldKey" asp-route-page="@TempData["pageLoc"]">
+
+        <div class="form-group">
+            <label>@Localizer["Key"]</label>
+            <input type="text" class="form-control" asp-for="key">
+        </div>
+        <div class="form-group">
+            <label>English</label>
+            <input type="text" class="form-control" asp-for="langEn">
+        </div>
+        <div class="form-group">
+            <label>Română</label>
+            <input type="text" class="form-control" asp-for="langRo">
+        </div>
+        <input type="submit" class="btn btn-primary" value="@Localizer["Submit"]">
+    </form>
+    <br>
+    <form method="post" asp-action="Back" asp-route-page="@TempData["pageLoc"]">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>

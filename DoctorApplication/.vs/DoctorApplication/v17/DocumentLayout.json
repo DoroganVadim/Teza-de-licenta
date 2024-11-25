@@ -1,0 +1,210 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\models\\doctorappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\models\\doctorappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\models\\dbentities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\models\\dbentities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\models\\dbentities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\models\\dbentities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.accounts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\univer\\an2\\an2sem2\\teza de an\\doctorapplication\\doctorapplication\\services\\emailtemplateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\services\\emailtemplateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\appsettings.json",
+              "RelativeDocumentMoniker": "DoctorApplication\\appsettings.json",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\appsettings.json",
+              "RelativeToolTip": "DoctorApplication\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-14T11:53:51.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Startup.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Startup.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Startup.cs",
+              "RelativeToolTip": "DoctorApplication\\Startup.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:51:03.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Program.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Program.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Program.cs",
+              "RelativeToolTip": "DoctorApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:50:59.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DoctorAppDbContext.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DoctorAppDbContext.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Models\\DoctorAppDbContext.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DoctorAppDbContext.cs",
+              "RelativeToolTip": "DoctorApplication\\Models\\DoctorAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:39:43.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DbEntities\\Appointment.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Models\\DbEntities\\Appointment.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DbEntities\\Appointment.cs",
+              "RelativeToolTip": "DoctorApplication\\Models\\DbEntities\\Appointment.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:27:10.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DbEntities\\Account.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Models\\DbEntities\\Account.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Models\\DbEntities\\Account.cs",
+              "RelativeToolTip": "DoctorApplication\\Models\\DbEntities\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T11:27:07.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "DoctorApplication\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "DoctorApplication\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T17:05:18.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Services\\EmailService.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Services\\EmailService.cs",
+              "RelativeToolTip": "DoctorApplication\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:37:05.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:34:15.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "DoctorApplication\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "DoctorApplication\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEwAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T16:34:06.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.accounts.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.accounts.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.accounts.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-04T16:30:44.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailTemplateService.cs",
+              "DocumentMoniker": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Services\\EmailTemplateService.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Services\\EmailTemplateService.cs",
+              "ToolTip": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\Services\\EmailTemplateService.cs",
+              "RelativeToolTip": "DoctorApplication\\Services\\EmailTemplateService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:29:56.48Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

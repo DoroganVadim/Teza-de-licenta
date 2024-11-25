@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="text-center">
+    <h1>@Localizer["ConformationSent"]</h1>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="form-center">
+    <form method="post" asp-action="Back" asp-route-page="@TempData["pageDoc"]">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>

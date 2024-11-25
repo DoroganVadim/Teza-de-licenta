@@ -1,0 +1,109 @@
+﻿@using DoctorApplication.Models.Home
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model UserAppointmentsViewModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Profile";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/pagination.css" />
+<link rel="stylesheet" href="~/css/jquery.timepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="~/css/doctorProfile.css">
+<link rel="stylesheet" type="text/css" href="~/css/DoctorApplicationConfirmation.css">
+<link rel="stylesheet" type="text/css" href="~/css/Tab.css">
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/jquery-3.6.0.min.js" asp-append-version="true"></script>
+<script src="~/js/jquery.timepicker.min.js" asp-append-version="true"></script>
+<script src="~/js/getDate.js" asp-append-version="true"></script>
+
+<div class="container">
+    <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">@Localizer["Home"]</a></li>
+            <li class="breadcrumb-item" aria-current="page">@Localizer["Appointments"]</li>
+        </ol>
+    </nav>
+    <div class="tabs">
+        <div class="tab">
+            <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+            <label for="tab-1" class="tab-label">@Localizer["Appointments"]</label>
+            <div class="tab-content">
+                <div class="wrapper" style="width:100%">
+                    <div class="container">
+                        @if (Model.appointments.Count() <= 0)
+                        {
+                            <h5>@Localizer["NoAppointments"]</h5>
+                        }
+                        <ul>
+                            @{
+                                int i = 0;
+                                string idString1 = "";
+                                string idString2 = "";
+                            }
+                            @foreach (var appointment in Model.appointments)
+                            {
+                                <li class="item_wrap male online">
+                                    <div class="item">
+                                        <div class="item_left">
+                                            <div class="data">
+                                                <p class="name">@Localizer["Appointment"]</p>
+                                                <p class="distance">
+                                                    @Localizer["UnderName"]: @appointment.surrnamePacient @appointment.namePacient
+                                                    <br>@Localizer["Doctor"]:@Model.doctors.First(d => d.id == appointment.doctor.id).surrname @Model.doctors.First(d => d.id == appointment.doctor.id).name
+                                                    <br>@Localizer["Date"]: @appointment.appointmentDate.ToShortDateString() @Localizer["Time"]: @appointment.appointmentTime.ToString(@"hh\:mm")
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <h6>
+                                            @{
+                                                idString1 = "MyAppointments1" + Convert.ToString(i);
+                                            }
+                                            @{
+                                                idString2 = "MyAppointments2" + Convert.ToString(i);
+                                            }
+                                            <a id="@idString1" href="#" onclick="AreYouSure('@idString1', '@idString2', 1)"><span class="cross">x</span><span style="color:#000000"> @Localizer["Annul"]</span></a>
+                                            <span id="@idString2" style="display:none">
+                                                <span>@Localizer["AreYouSure?"]</span>
+                                                <br><a asp-action="AnnulAppointment" asp-controller="Home" asp-route-id="@appointment.id" asp-route-page="@Model.pageViewModel.pageNumber"><span class="check">Yes</span></a>
+                                                <a href="#" onclick="AreYouSure('@idString1', '@idString2', 2)"><span class="cross">No</span></a>
+                                            </span>
+                                        </h6>
+                                    </div>
+                                    <br>
+                                </li>
+                                i++;
+                            }
+                        </ul>
+                    </div>
+                    <center>
+                        @if (Model.pageViewModel.HasPreviousPage)
+                        {
+                            <a asp-action="MyAppointments"
+                               asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+                               class="btn btn-outline-dark">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                @Localizer["Previous"]
+                            </a>
+                        }
+
+                        @if (Model.pageViewModel.HasNextPage)
+                        {
+                            <a asp-action="MyAppointments"
+                               asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+                               class="btn btn-outline-dark">
+                                @Localizer["Next"]
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        }
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

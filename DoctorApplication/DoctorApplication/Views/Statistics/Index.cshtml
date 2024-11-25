@@ -1,0 +1,96 @@
+﻿@using Microsoft.AspNetCore.Html;
+@using Newtonsoft.Json;
+@using DoctorApplication.Models.Statistics
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model StatisticsModel
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<div>
+    <canvas id="Chart1" style="width:100%;max-width:600px"></canvas>
+    <script>
+        var xValues = ["User", "Admin"];
+        var yValues = [@Model.eachRoleNum[0], @Model.eachRoleNum[1]]
+        var barColors = [
+            "#60AFFF",
+            "#FF6060",
+        ];
+
+        new Chart("Chart1", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "@Localizer["AdminUserRatio"]"
+                }
+            }
+        });
+    </script>
+    <br><br><br>
+    <canvas id="Chart3" style="width:100%;max-width:600px"></canvas>
+    <script>
+        var xValues = ["@Localizer["Active"]", "@Localizer["Inactive"]"];
+        var yValues = [@Model.activityCount[0], @Model.activityCount[1]]
+        var barColors = [
+            "#60AFFF",
+            "#D1D1D1",
+        ];
+
+        new Chart("Chart3", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "@Localizer["Activity"]"
+                }
+            }
+        });
+    </script>
+    <br><br><br>
+
+    <canvas id="Chart2" style="width:100%;max-width:1000px"></canvas>
+    <script>
+        @{
+            ViewBag.Data = new HtmlString(JsonConvert.SerializeObject(Model.doctorsNames, Formatting.None));
+        }
+                var xValues = JSON.parse('@ViewBag.Data');
+        @{
+            ViewBag.Data = new HtmlString(JsonConvert.SerializeObject(Model.doctorsAppointmentNum, Formatting.None));
+        }
+                var yValues = JSON.parse('@ViewBag.Data');
+        var barColors = "#0DAF00";
+
+        new Chart("Chart2", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "@Localizer["AppointmentCount"]"
+                }
+            }
+        });
+    </script>
+</div>

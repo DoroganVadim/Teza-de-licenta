@@ -1,0 +1,312 @@
+﻿@using DoctorApplication.Models.Home
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model HomeModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DoctorApp</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="~/css/FromTemplate/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/FromTemplate/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/FromTemplate/style.css">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <section id="banner" class="banner">
+        <div class="bg-color">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" asp-controller="Home" asp-action="Index">DoctorApp</a>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="" style="padding-top:0.6rem; margin-right:0.6rem">
+                                    <div class="input-group mb-3" style="padding-top: 0.5rem">
+                                        <form asp-controller="Account" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post" class="form-horizontal">
+                                            <select class="custom-select" name="culture" onchange="this.form.submit();">
+                                                <option selected value="">@Localizer["Language"]</option>
+                                                <option value="ro">Română</option>
+                                                <option value="en">English</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="active"><a href="#banner">@Localizer["Home"]</a></li>
+                                <li class=""><a href="#service">@Localizer["Services"]</a></li>
+                                <li class=""><a href="#doctor-team">@Localizer["Doctors"]</a></li>
+                                <li class=""><a href="#contact">@Localizer["ContactInfo"]</a></li>
+                                @if (Convert.ToBoolean(User.Claims.FirstOrDefault(c => c.Type == "isDoctor").Value))
+                                {
+                                    <li class="">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="DoctorAccountProfile">@Localizer["MyProfile"]</a>
+                                    </li>
+                                }
+                                <li class="">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="MyAppointments">@Localizer["MyAppointments"]</a>
+                                </li>
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <li class="">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ChageModeToAdmin">@Localizer["AdminMode"]</a>
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@Localizer["Log out"]</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="banner-info">
+                        <div class="banner-text text-center">
+                            <h1 class="white">@Localizer["HealthCareAtYourDesk"]</h1>
+                            <p>@Localizer["TheMostValuableThingIsYourHealth"]</p>
+                            <a href="#contact" class="btn btn-appoint" style="margin-top:10rem">@Localizer["BookAppointment"]</a>
+                        </div>
+                        <div class="overlay-detail text-center">
+                            <a href="#service"><i class="fa fa-angle-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <h2 class="ser-title">@Localizer["OurServices"]</h2>
+                    <hr class="botm-line">
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-info">
+                        <div class="icon">
+                            <i class="fa fa-stethoscope"></i>
+                        </div>
+                        <div class="icon-info">
+                            <h4>@Localizer["24HourSupport"]</h4>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <div class="icon">
+                            <i class="fa fa-ambulance"></i>
+                        </div>
+                        <div class="icon-info">
+                            <h4>@Localizer["EmergencyServices"]</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="service-info">
+                        <div class="icon">
+                            <i class="fa fa-user-md"></i>
+                        </div>
+                        <div class="icon-info">
+                            <h4>@Localizer["MedicalCounseling"]</h4>
+                        </div>
+                    </div>
+                    <div class="service-info">
+                        <div class="icon">
+                            <i class="fa fa-medkit"></i>
+                        </div>
+                        <div class="icon-info">
+                            <h4>@Localizer["PremiumHealthcare"]</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="doctor-team" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="ser-title">@Localizer["MeetOurDoctors"]</h2>
+                    <hr class="botm-line">
+                </div>
+                @foreach (var doctor in Model.doctors)
+                {
+                    if (User.Identity.Name == doctor.account.email) continue;
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <div class="thumbnail">
+                            @if (doctor.imageString is null || doctor.imageString is "")
+                            {
+                                <img src="~/res/img/NotFound.png" style="width:25rem; height:25rem">
+                            }
+                            else
+                            {
+                                <img src="@Url.Action("doctorImageLoad", "Home", new { docId = doctor.id })" class="team-img" alt="@Localizer["NotFound"]" style="width:25rem; height:25rem">
+                            }
+                            <div class="caption">
+                                <h3><a asp-action="DoctorProfile" asp-controller="Home" asp-route-idDoc="@doctor.id">@doctor.surrname @doctor.name</a></h3>
+                                <p>@Localizer["Doctor"]</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="ser-title">@Localizer["ContactUs"]</h2>
+                    <hr class="botm-line">
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <h3>@Localizer["ContactInfo"]</h3>
+                    <div class="space"></div>
+                    <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Rep. Moldova<br>Chișinău</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>doroganvadimpracticatest@gmail.com</p>
+                    <div class="space"></div>
+                    <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>(+373) 79866280</p>
+                </div>
+                <div class="col-md-8 col-sm-8 marb20">
+                    <div class="contact-info">
+                        @if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+                        {
+                            <div class="text-center">
+                                <div class="alert @Html.Raw(TempData["TypeMessage"])" role="alert">
+                                    @Localizer[TempData["Message"].ToString()]
+                                </div>
+                            </div>
+                        }
+                        <h3>@Localizer["BookAppointment"]</h3>
+                        <div class="space"></div>
+                        <form class="contactForm" asp-controller="Home" asp-action="Index" method="post" id="appointmentForm">
+                            <div class="form-group">
+                                <label>@Localizer["Surname"]</label>
+                                <input type="text" class="form-control br-radius-zero" data-rule="minlen:4" data-msg="Please enter at least 4 chars" asp-for="surrname" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>@Localizer["Name"]</label>
+                                <input type="text" class="form-control br-radius-zero" data-rule="minlen:4" data-msg="Please enter at least 4 chars" asp-for="name" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>@Localizer["Doctor"]</label>
+                                <select asp-for="doctor" class="form-control" id="doctor">
+                                    @{
+                                        foreach (var doc in Model.doctors)
+                                        {
+                                            if (doc.activityStatus && doc.verified && doc.account.email != User.Identity.Name)
+                                            {
+                                                <option value="@Convert.ToString(doc.id)">@doc.surrname @doc.name</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>@Localizer["PhoneNumber"]</label>
+                                <input type="text" class="form-control br-radius-zero" data-rule="required" data-msg="Required" asp-for="tel" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>@Localizer["Day"]</label>
+                                <input type="date" class="form-control" data-rule="required" data-msg="Required" asp-for="date" value="" id="dataInreg" min="@DateTime.Now.ToString("yyyy-MM-dd")">
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>@Localizer["Time"]</label>
+                                <select class="form-control" asp-for="time">
+                                </select>
+                            </div>
+
+                            <div class="form-action">
+                                <button type="submit" class="btn btn-form">@Localizer["Submit"]</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 marb20">
+                        <div class="ftr-tle">
+                            <h4 class="white no-padding">About Us</h4>
+                        </div>
+                        <div class="info-sec">
+                            <p>.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 marb20">
+                        <div class="ftr-tle">
+                            <h4 class="white no-padding">Quick Links</h4>
+                        </div>
+                        <div class="info-sec">
+                            <ul class="quick-info">
+                                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+                                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 marb20">
+                        <div class="ftr-tle">
+                            <h4 class="white no-padding">Follow us</h4>
+                        </div>
+                        <div class="info-sec">
+                            <ul class="social-icon">
+                                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        © Copyright Medilab Theme. All Rights Reserved
+                        <div class="credits">
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/js/FromTemplate/jquery.min.js"></script>
+    <script src="~/js/FromTemplate/jquery.easing.min.js"></script>
+    <script src="~/js/FromTemplate/bootstrap.min.js"></script>
+    <script src="~/js/FromTemplate/custom.js"></script>
+    <script src="~/js/FromTemplate/contactform.js"></script>
+    <script src="~/js/getDate.js"></script>
+</body>
+
+</html>

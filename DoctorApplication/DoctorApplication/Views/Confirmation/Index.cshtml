@@ -1,0 +1,6 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="text-center" style="margin-top:4rem">
+    <h1>@Localizer[TempData["ConfirmationAction"].ToString()]</h1>
+</div>

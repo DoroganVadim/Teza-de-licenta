@@ -1,0 +1,67 @@
+﻿@using DoctorApplication.Models.Doctor
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model DoctorApplicationModel
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/DoctorApplicationConfirmation.css" />
+
+<div class="wrapper" style="width:100%">
+    <div class="title">
+        @Localizer["DoctorApplicationList"]
+    </div>
+    @if (Model.doctors.Count() is 0)
+    {
+        <center><h3>@Localizer["NoDoctorApplicationsFound"]</h3></center>
+    }
+    <div class="container">
+        <ul>
+            @foreach (var doc in Model.doctors)
+            {
+                <li class="item_wrap male online">
+                    <div class="item" onclick="showUncheckedProfile(@doc.id,@Model.pageViewModel.pageNumber)">
+                        <div class="item_left">
+                            <div class="img">
+                                @if (doc.imageString is null || doc.imageString is "")
+                                {
+                                    <img src="/res/img/NotFound.png" alt="Doctor" class="rounded-circle" width="150">
+                                }
+                                else
+                                {
+                                    <img src="@Url.Action("doctorImageLoad", "Home", new { docId = doc.id })" alt="Doctor" class="rounded-circle" width="50" height="50">
+                                }
+                            </div>
+                            <div class="data">
+                                <p class="name">@doc.surrname @doc.name</p>
+                                <p class="distance">@Localizer["E-Mail"]: @doc.account.email<br>@Localizer["PhoneNumber"]: @doc.tel</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<center>
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+
+        <a asp-action="DoctorApplicationConfirmation"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="DoctorApplicationConfirmation"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</center>

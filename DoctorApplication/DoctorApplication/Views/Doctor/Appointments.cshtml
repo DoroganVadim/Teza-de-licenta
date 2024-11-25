@@ -1,0 +1,153 @@
+﻿@using DoctorApplication.Models.Doctor
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model AppointmentsViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Localizer["Appointments"]</h2>
+@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+{
+    <div class="text-center">
+        <div class="alert @Html.Raw(TempData["TypeMessage"])" role="alert">
+            @Localizer[@TempData["Message"].ToString()]
+        </div>
+    </div>
+}
+<div>
+    @if (Model.appointments.Count() > 0)
+    {
+        <form method="post" asp-controller="Doctor" asp-action="Export" asp-route-idDoc="@Model.idDoctor">
+            <div class="form-group">
+                <label>@Localizer["MinLim"]</label>
+                <div class="row">
+                    <div class="col">
+                        <input id="dateStart" name="dateStart" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" max="@DateTime.Now.ToString("yyyy-MM-dd")" class="form-control">
+                    </div>
+                    <div class="col">
+                        <select id="timeStart" name="timeStart" class="form-control">
+                            <option selected>08:00</option>
+                            <option>08:30</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>@Localizer["MaxLim"]</label>
+                <div class="row">
+                    <div class="col">
+                        <input id="dateEnd" name="dateEnd" type="date" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" max="@DateTime.Now.ToString("yyyy-MM-dd")" >
+                    </div>
+                    <div class="col">
+                        <select id ="timeEnd" name="timeEnd" class="form-control">
+                            <option selected>08:00</option>
+                            <option>08:30</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="@Localizer["Export"]" />
+        </form>
+    }
+    <br>
+    @if (Model.appointments.Count() > 0)
+    {
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">@Localizer["Num."]</th>
+                    <th scope="col">@Localizer["Patient Surname"]</th>
+                    <th scope="col">@Localizer["Patient Name"]</th>
+                    <th scope="col">@Localizer["PhoneNumber"]</th>
+                    <th scope="col">@Localizer["Day"]</th>
+                    <th scope="col">@Localizer["Time"]</th>
+                    <th scope="col">@Localizer["Confirmed"]</th
+                </tr>
+            </thead>
+            @{
+                int i = 1;
+                foreach (var appoint in Model.appointments)
+                {
+                        <tr>
+                            <td>@(i + (Model.pageViewModel.pageNumber - 1) * Model.pageViewModel.pageSize)</td>
+                            <td>@appoint.surrnamePacient</td>
+                            <td>@appoint.namePacient</td>
+                            <td>@appoint.tel</td>
+                            <td>@appoint.appointmentDate.ToString("dd/MM/yyyy")</td>
+                            <td>@appoint.appointmentTime</td>
+                            <td>@appoint.confirmedUser
+                            @{ new String(" ");}
+                            @appoint.confirmedDoctor</td>
+                        </tr>
+                    i++;
+                }
+            }
+        </table>
+    }
+    else
+    {
+        <h3>@Localizer["NoAppointments"]</h3>
+    }
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+
+        <a asp-action="Inregistrari"
+           asp-route-idDoc="@Model.idDoctor"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="Inregistrari"
+           asp-route-idDoc="@Model.idDoctor"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+
+    <br>
+    <br>
+    <br>
+    <form method="post" asp-action="Back">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>

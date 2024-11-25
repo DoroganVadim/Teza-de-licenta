@@ -1,0 +1,30 @@
+﻿a {
+    text-decoration: none;
+}
+
+.accept {
+    color: #FFF;
+    background: #44CC44;
+    padding: 15px 20px;
+    box-shadow: 0 4px 0 0 #2EA62E;
+}
+
+    .accept:hover {
+        background: #6FE76F;
+        color:#FFF;
+        box-shadow: 0 4px 0 0 #7ED37E;
+    }
+
+.deny {
+    margin-left:1rem;
+    color: #FFF;
+    background: tomato;
+    padding: 15px 20px;
+    box-shadow: 0 4px 0 0 #CB4949;
+}
+
+    .deny:hover {
+        background: rgb(255, 147, 128);
+        color: #FFF;
+        box-shadow: 0 4px 0 0 #EF8282;
+    }

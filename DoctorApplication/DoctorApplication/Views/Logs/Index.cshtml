@@ -1,0 +1,68 @@
+﻿@using DoctorApplication.Models.Logs
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model LogsModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@Localizer["Doctors"]</h2>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">@Localizer["Num."]</th>
+                <th scope="col">@Localizer["IP"]</th>
+                <th scope="col">@Localizer["Date"]</th>
+                <th scope="col">@Localizer["Event"]</th>
+                <th scope="col">@Localizer["UserId"]</th>
+                <th scope="col">@Localizer["Type"]</th>
+
+            </tr>
+        </thead>
+        @{
+            TempData["pageDoc"] = Convert.ToString(Model.pageViewModel.pageNumber);
+            int i = 1;
+            foreach (var log in Model.logs)
+            {
+                <tr>
+                    <td>@(i + (Model.pageViewModel.pageNumber - 1) * Model.pageViewModel.pageSize)</td>
+                    <td>@log.ip</td>
+                    <td>@log.date.ToString()</td>
+                    <td>@log._event</td>
+                    <td>@log.userId</td>
+                    <td>@log.type</td>
+                </tr>
+                i++;
+            }
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    @if (Model.pageViewModel.HasPreviousPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber-1)"
+           class="btn btn-outline-dark">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            @Localizer["Previous"]
+        </a>
+    }
+
+    @if (Model.pageViewModel.HasNextPage)
+    {
+        <a asp-action="Index"
+           asp-route-page="@(Model.pageViewModel.pageNumber+1)"
+           class="btn btn-outline-dark">
+            @Localizer["Next"]
+            <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    }
+</div>

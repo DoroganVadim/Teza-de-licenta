@@ -1,0 +1,88 @@
+﻿@using DoctorApplication.Models.Doctor
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@model DoctorSpecialityModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form method="post" asp-action="AddMod" asp-route-page="@TempData["pageDoc"]" enctype="multipart/form-data">
+        <input asp-for="doctor.id" hidden />
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["DoctorPicture"]</label><br>
+            </div>
+            <div class="form-group row">
+                @if (Model.doctor.imageString is null || Model.doctor.imageString == "")
+                {
+                    <img id="docImage" src="~/res/img/NotFound.png" style="width:20rem; height:20rem">
+                }
+                else
+                {
+                    <img id="docImage" src="@Url.Action("doctorImageLoad", "Home", new { docId = Model.doctor.id })" class="team-img" alt="@Localizer["NotFound"]" style="width:20rem; height:20rem">
+                }
+            </div>
+            <div class="form-group row">
+                <input id="docImageFile" name="file" type="file" accept="image/png, image/jpeg" onchange="loadFile(event)">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["Surname"]</label>
+                <input type="text" class="form-control" asp-for="doctor.surrname">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["Name"]</label>
+                <input type="text" class="form-control" asp-for="doctor.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["DoctorType"]</label>
+                <button type="button" class="collapsible">...</button>
+                <div class="content">
+                    @{
+                        foreach (var type in Model.doctorSpecialities)
+                        {
+                            <div class="form-group row">
+                                <div class="form-check">
+                                    @if (Model.doctor.specialities != null && Model.doctor.specialities.Any(d => d.id == type.id))
+                                    {
+                                        <input type="checkbox" name="ids" value="@type.id" checked />
+                                    }
+                                    else
+                                    {
+                                        <input type="checkbox" name="ids" value="@type.id" />
+                                    }
+                                    <label>@type.name</label>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["E-Mail"]</label>
+                <input type="text" class="form-control" asp-for="doctor.account.email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group row">
+                <label>@Localizer["PhoneNumber"]</label>
+                <input type="text" class="form-control" asp-for="doctor.tel">
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary" value="@Localizer["Submit"]">
+    </form>
+    <br>
+    <form method="post" asp-action="Back" asp-route-page="@TempData["pageDoc"]">
+        <input type="submit" class="btn btn-primary" value="@Localizer["Back"]">
+    </form>
+</div>
