@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj": {}
+    "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj": {}
   },
   "projects": {
-    "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj": {
+    "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj",
+        "projectUniqueName": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj",
         "projectName": "DoctorApplication",
-        "projectPath": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj",
+        "projectPath": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\DoctorApplication.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\An2\\an2sem2\\Teza de an\\DoctorApplication\\DoctorApplication\\obj\\",
+        "outputPath": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net6.0": {
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
