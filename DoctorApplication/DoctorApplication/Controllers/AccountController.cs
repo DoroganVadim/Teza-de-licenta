@@ -75,14 +75,6 @@ namespace DoctorApplication.Controllers
             else
             {
                 TempData["LogInMessage"] = "IncorrectLogInOrPassword";
-                var user = context.accounts.First(u => u.email == model.email);
-                context.logEvents.Add(LogEvent.createLog(
-                    HttpContext.Connection.RemoteIpAddress?.ToString(),
-                    "Login",
-                    user,
-                    "Error"
-                    ));
-                context.SaveChanges();
                 return View();
             }
         }

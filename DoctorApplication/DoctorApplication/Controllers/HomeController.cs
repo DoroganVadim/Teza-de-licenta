@@ -113,7 +113,7 @@ namespace DoctorApplication.Controllers
             };
 
 
-            var noTimes = context.appointments.Where(i => i.appointmentDate == date && i.doctor.id == idDoc && i.confirmedUser == true).Select(i => i.appointmentTime).ToList();
+            var noTimes = context.appointments.Where(i => i.appointmentDate == date && i.doctorId == idDoc && i.confirmedUser == true).Select(i => i.appointmentTime).ToList();
             List<string> finalTimes = new List<string>();
             foreach (TimeSpan t in noTimes)
             {

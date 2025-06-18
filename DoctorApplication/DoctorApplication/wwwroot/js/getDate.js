@@ -7,10 +7,13 @@
             type: 'POST',
             data: { date: selectedValue, idDoc: idDoc },
             success: function (data) {
-                $("#timp").empty();
+                $("#time").empty();
                 for (var i = 0; i < data.length; i++) {
-                    $("#timp").append('<option>' + data[i] + '</option>');
+                    $("#time").append('<option value="' + data[i] + '">' + data[i] + '</option>');
                 }
+            },
+            error: function (xhr, status, error) {
+                console.error("Eroare la GetTimes:", status, error);
             }
         });
     });

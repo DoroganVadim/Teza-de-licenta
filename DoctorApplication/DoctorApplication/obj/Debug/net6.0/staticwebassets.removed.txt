@@ -1,0 +1,6 @@
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\fontawesome-webfont.eot
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\fontawesome-webfont.svg
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\fontawesome-webfont.ttf
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\fontawesome-webfont.woff
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\fontawesome-webfont.woff2
+D:\Teza de licenta\DoctorApplication\DoctorApplication\wwwroot\css\fonts\FontAwesome.otf

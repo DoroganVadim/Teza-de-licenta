@@ -10,7 +10,6 @@ namespace DoctorApplication.Models.DbEntities
         public string name { get; set; }
         public string surrname { get; set; }
         public string tel { get; set; }
-        //public string email { get; set; }
         public virtual Account? account { get; set; }
         public bool activityStatus { get; set; }
         public int appointmentNum { get; set; }

@@ -1,11 +1,11 @@
 wwwroot\css\DoctorApplicationConfirmation.css
 wwwroot\css\doctorPorfile.css
-wwwroot\css\fonts\fontawesome-webfont.eot
-wwwroot\css\fonts\fontawesome-webfont.svg
-wwwroot\css\fonts\fontawesome-webfont.ttf
-wwwroot\css\fonts\fontawesome-webfont.woff
-wwwroot\css\fonts\fontawesome-webfont.woff2
-wwwroot\css\fonts\FontAwesome.otf
+wwwroot\css\FromTemplate\fonts\FontAwesome.otf
+wwwroot\css\FromTemplate\fonts\fontawesome-webfont.woff2
+wwwroot\css\FromTemplate\fonts\fontawesome-webfont.woff
+wwwroot\css\FromTemplate\fonts\fontawesome-webfont.ttf
+wwwroot\css\FromTemplate\fonts\fontawesome-webfont.svg
+wwwroot\css\FromTemplate\fonts\fontawesome-webfont.eot
 wwwroot\css\FromTemplate\bootstrap.min.css
 wwwroot\css\FromTemplate\font-awesome.min.css
 wwwroot\css\FromTemplate\style.css

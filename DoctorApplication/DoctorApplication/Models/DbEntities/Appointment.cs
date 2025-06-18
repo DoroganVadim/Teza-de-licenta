@@ -9,8 +9,8 @@ namespace DoctorApplication.Models.DbEntities
         public int id { get; set; }
         public string namePacient { get; set; }
         public string surrnamePacient { get; set; }
-        //[ForeignKey("Doctor")]
-        //public int idDoctor { get; set; }
+        public int doctorId { get; set; }
+        [ForeignKey("doctorId")]
         public virtual Doctor doctor { get; set; }
         public DateTime appointmentDate { get; set; }
         public TimeSpan appointmentTime { get; set; }
