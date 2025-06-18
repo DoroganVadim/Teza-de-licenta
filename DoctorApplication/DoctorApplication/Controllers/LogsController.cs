@@ -19,7 +19,7 @@ namespace DoctorApplication.Controllers
         {
             int pageSize = 5;
             var count = await context.logEvents.CountAsync();
-            var items = await context.logEvents.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
+            var items = await context.logEvents.OrderByDescending(l => l.date).Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
             PageViewModel pageViewModel = new PageViewModel(count, page, pageSize);
             LogsModel viewModel = new LogsModel
             {

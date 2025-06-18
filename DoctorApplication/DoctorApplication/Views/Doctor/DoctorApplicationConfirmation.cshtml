@@ -23,6 +23,9 @@
                     <div class="item" onclick="showUncheckedProfile(@doc.id,@Model.pageViewModel.pageNumber)">
                         <div class="item_left">
                             <div class="img">
+                                @{
+                                    int a = doc.id;
+                                }
                                 @if (doc.imageString is null || doc.imageString is "")
                                 {
                                     <img src="/res/img/NotFound.png" alt="Doctor" class="rounded-circle" width="150">

@@ -13,11 +13,11 @@ namespace DoctorApplication.Controllers
     public class HomeController : Controller
     {
         private readonly DoctorAppDbContext context;
-        private readonly IEmailTemplateService _templateService;
+        private readonly IEmailTemplateService templateService;
 
         public HomeController(DoctorAppDbContext Context, IEmailTemplateService templateService)
         {
-            _templateService = templateService;
+            this.templateService = templateService;
             this.context = Context;
         }
 
@@ -40,13 +40,14 @@ namespace DoctorApplication.Controllers
             context.Add(inr);
             context.SaveChanges();
             EmailService emailService = new EmailService();
-            string confirmLink = Url.Action("AppointmentConfirmation", "Confirmation", new { idInreg = inr.id, email = User.Identity.Name }, Request.Scheme);
-            string annulLink = Url.Action("AppointmentAnnul", "Confirmation", new { idInreg = inr.id, email = User.Identity.Name }, Request.Scheme);
+            int a = inr.id;
+            string confirmLink = Url.Action("AppointmentConfirmation", "Confirmation", new { idAppoint = inr.id, email = User.Identity.Name }, Request.Scheme);
+            string annulLink = Url.Action("AppointmentAnnul", "Confirmation", new { idAppoint = inr.id, email = User.Identity.Name }, Request.Scheme);
             var docName = context.doctors.First(d => d.id == model.doctor);
 
 
             EmailComfirmationModel confirmationEmailModel = new EmailComfirmationModel { patientFullName = inr.surrnamePacient + " " + inr.namePacient, phone = inr.tel, doctorFullName = docName.surrname + " " + docName.name, day = inr.appointmentDate.ToString("dd-MM-yyyy"), time = inr.appointmentTime.ToString(), confirmLink = confirmLink, annulLink = annulLink };
-            string message = await _templateService.GetTemplateHtmlAsStringAsync("EmailTemplates/AppointmentConfirmationEmail", confirmationEmailModel);
+            string message = await templateService.GetTemplateHtmlAsStringAsync("EmailTemplates/AppointmentConfirmationEmail", confirmationEmailModel);
             await emailService.SendEmailAsync(User.Identity.Name, "Confirmation", message, "DoctorAplication");
             var newmodel = new HomeModel
             {
@@ -113,8 +114,10 @@ namespace DoctorApplication.Controllers
             };
 
 
-            var noTimes = context.appointments.Where(i => i.appointmentDate == date && i.doctorId == idDoc && i.confirmedUser == true).Select(i => i.appointmentTime).ToList();
-            List<string> finalTimes = new List<string>();
+            var noTimes = context.appointments
+                .Where(i => i.appointmentDate.Date == date.Date && i.doctorId == idDoc && i.confirmedUser == true)
+                .Select(i => i.appointmentTime)
+                .ToList(); List<string> finalTimes = new List<string>();
             foreach (TimeSpan t in noTimes)
             {
                 string str = "";

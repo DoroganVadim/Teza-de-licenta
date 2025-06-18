@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Teza de licenta\\DoctorApplication\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\confirmationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\confirmationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\DoctorController.cs",
+              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAASwIMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T18:17:00.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswIIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T17:50:57.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfirmationController.cs",
+              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAUwGUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T17:46:54.906Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -65,8 +65,8 @@ namespace DoctorApplication.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            var appoint = context.appointments.First(a => a.id == idAppoint);
-            if ((DateTime.Now - appoint.created).TotalHours > 1 || context.appointments.Any(a => a.id != appoint.id && a.appointmentDate == appoint.appointmentDate && a.appointmentTime == appoint.appointmentTime && a.doctor.id == appoint.doctor.id && a.confirmedUser == true))
+            var appoint = context.appointments.Include(a=>a.doctor).First(a => a.id == idAppoint);
+            if ((DateTime.Now - appoint.created).TotalHours > 1 || context.appointments.Include(a=>a.doctor).Any(a => a.id != appoint.id && a.appointmentDate == appoint.appointmentDate && a.appointmentTime == appoint.appointmentTime && a.doctor.id == appoint.doctor.id && a.confirmedUser == true))
             {
                 context.logEvents.Add(LogEvent.createLog(
                 HttpContext.Connection.RemoteIpAddress?.ToString(),
@@ -97,22 +97,22 @@ namespace DoctorApplication.Controllers
             TempData["ConfirmationAction"] = "AppointmentVerifiedText";
             return RedirectToAction("Index");
         }
-        public IActionResult AppointmentAnnul(int idInreg, string email)
+        public IActionResult AppointmentAnnul(int idAppoint, string email)
         {
-            if (idInreg is 0 || email is null || context.accounts.Any(u => u.email == email) == false)
+            if (idAppoint is 0 || email is null || context.accounts.Any(u => u.email == email) == false)
             {
                 return RedirectToAction("Login", "Account");
             }
-            if (context.appointments.FirstOrDefault(a => a.id == idInreg) is null)
+            if (context.appointments.FirstOrDefault(a => a.id == idAppoint) is null)
             {
                 return RedirectToAction("Index", "Home");
             }
-            var inreg = context.appointments.First(a => a.id == idInreg);
+            var inreg = context.appointments.Include(a => a.doctor).First(a => a.id == idAppoint);
             if ((DateTime.Now - inreg.created).TotalHours > 1 || context.appointments.Include(a=>a.doctor).Any(a => a.id != inreg.id && a.appointmentDate == inreg.appointmentDate && a.appointmentTime == inreg.appointmentTime && a.doctor.id == inreg.doctor.id && a.confirmedUser == true))
             {
                 context.logEvents.Add(LogEvent.createLog(
                 HttpContext.Connection.RemoteIpAddress?.ToString(),
-                "Appointment Annul/id = " + idInreg,
+                "Appointment Annul/id = " + idAppoint,
                 context.accounts.Where(u => u.email == User.Identity.Name).FirstOrDefault(),
                 "Error"
             ));
@@ -124,7 +124,7 @@ namespace DoctorApplication.Controllers
             context.appointments.Remove(inreg);
             context.logEvents.Add(LogEvent.createLog(
                 HttpContext.Connection.RemoteIpAddress?.ToString(),
-                "Appointment Annul/id = " + idInreg,
+                "Appointment Annul/id = " + idAppoint,
                 context.accounts.Where(u => u.email == email).FirstOrDefault(),
                 "Succes"
             ));

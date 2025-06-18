@@ -56,16 +56,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEFwcG9pbnRtZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Teza de licenta/DoctorApplication/DoctorApplication/Views/Doctor/DcotorProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERjb3RvclByb2ZpbGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Teza de licenta/DoctorApplication/DoctorApplication/Views/Doctor/DoctorAddMod.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvY3RvckFkZE1vZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Teza de licenta/DoctorApplication/DoctorApplication/Views/Doctor/DoctorApplicationConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvY3RvckFwcGxpY2F0aW9uQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Teza de licenta/DoctorApplication/DoctorApplication/Views/Doctor/DoctorProfileCheck.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERvY3RvclByb2ZpbGVDaGVjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Teza de licenta/DoctorApplication/DoctorApplication/Views/Doctor/Index.cshtml]

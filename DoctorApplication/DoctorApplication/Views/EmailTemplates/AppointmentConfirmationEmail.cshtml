@@ -1,5 +1,5 @@
-﻿@using DoctorApplication.Models.EmailTemplates
-@model ConfirmationEmailModel
+﻿@using DoctorApplication.Models.Home
+@model EmailComfirmationModel
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 <!DOCTYPE html>
@@ -141,7 +141,7 @@
                                 <b>@Localizer["Doctor"]:</b>@Model.doctorFullName<br>
                                 <b>@Localizer["Day"]:</b>@Model.day, <b>@Localizer["Time"]:</b>@Model.time<br>
                                 <b>@Localizer["YourName"]:</b> @Model.patientFullName<br>
-                                <b>@Localizer["YourPhone"]:</b> @Model.tel<br>
+                                <b>@Localizer["YourPhone"]:</b> @Model.phone<br>
                             </p>
                         </td>
                     </tr>

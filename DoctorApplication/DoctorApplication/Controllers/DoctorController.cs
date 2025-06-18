@@ -21,7 +21,7 @@ namespace DoctorApplication.Controllers
         public DoctorController(DoctorAppDbContext Context, IEmailTemplateService templateService)
         {
             this.context = Context;
-            templateService = templateService;
+            this.templateService = templateService;
         }
         public async Task<IActionResult> Index(int page = 1)
         {
@@ -85,7 +85,7 @@ namespace DoctorApplication.Controllers
             if (idDoc is 0)
                 return RedirectToAction("AddDoctor");
 
-            var doctor = context.doctors.Include(d => d.specialities).FirstOrDefault(d => d.id == idDoc);
+            var doctor = context.doctors.Include(d => d.specialities).Include(d=>d.account).FirstOrDefault(d => d.id == idDoc);
             if (doctor is null)
                 return RedirectToAction("AddDoctor");
             var types = context.doctorSpecialities.Where(d => d.enabled == true);
@@ -311,7 +311,7 @@ namespace DoctorApplication.Controllers
         {
             int pageSize = 5;
             var count = await context.doctors.Where(d => d.activityStatus == true && d.verified == false).CountAsync();
-            var items = await context.doctors.Include(d => d.specialities).Skip((page - 1) * pageSize).Where(d => d.verified == false && d.activityStatus == true).Take(pageSize).ToListAsync();
+            var items = await context.doctors.Include(d => d.specialities).Include(d=>d.account).Skip((page - 1) * pageSize).Where(d => d.verified == false && d.activityStatus == true).Take(pageSize).ToListAsync();
             PageViewModel pageViewModel = new PageViewModel(count, page, pageSize);
             DoctorApplicationModel viewModel = new DoctorApplicationModel
             {
@@ -325,7 +325,7 @@ namespace DoctorApplication.Controllers
         {
             if (context.doctors.Any(d => d.id == idDoc) is false || idDoc is 0) return RedirectToAction("DoctorApplicationConfirmation");
             @TempData["Page"] = page;
-            Doctor model = context.doctors.Where(d => d.id == idDoc).Include(d => d.specialities).FirstOrDefault();
+            Doctor model = context.doctors.Where(d => d.id == idDoc).Include(d => d.specialities).Include(d=>d.account).FirstOrDefault();
             return View(model);
         }
 

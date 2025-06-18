@@ -3,8 +3,18 @@
   "WorkspaceRootPath": "D:\\Teza de licenta\\DoctorApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.accounts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.logEvents.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|d:\\teza de licenta\\doctorapplication\\doctorapplication\\controllers\\confirmationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95BE3479-DB39-449F-9BF5-08E1ABCF6E48}|DoctorApplication\\DoctorApplication.csproj|solutionrelative:doctorapplication\\controllers\\confirmationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +29,47 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "DoctorApplication\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwEwAAABGAAAAAAAAAA==",
+              "Title": "dbo.accounts [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.accounts.sql",
+              "ToolTip": "dbo.accounts [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-18T18:21:32.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.logEvents [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__UNIVER_AN2_AN2SEM2_TEZA_DE_AN_DOCTORAPPLICATION_DOCTORAPPDB.MDF/True/SqlTable/dbo.logEvents.sql",
+              "ToolTip": "dbo.logEvents [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-18T18:15:55.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:51:48.198Z",
+              "WhenOpened": "2025-06-18T17:50:57.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfirmationController.cs",
+              "DocumentMoniker": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "RelativeDocumentMoniker": "DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "ToolTip": "D:\\Teza de licenta\\DoctorApplication\\DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "RelativeToolTip": "DoctorApplication\\Controllers\\ConfirmationController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAUwGUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T17:46:54.906Z",
               "EditorCaption": ""
             }
           ]
